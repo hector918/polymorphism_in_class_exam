@@ -2,6 +2,9 @@ package org.example;
 
 public class NotificationService {
 
+    public NotificationService(){
+
+    }
 
     public static void main(String[] args) {
         NotificationService service = new NotificationService();
@@ -15,5 +18,10 @@ public class NotificationService {
         service.sendNotification(sms);
         System.out.println("---");
         service.sendNotification(push);
+    }
+
+    public void sendNotification(Notification sender){
+        sender.send();
+        sender.displayInfo();
     }
 }
